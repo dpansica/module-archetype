@@ -41,7 +41,7 @@ public class ContactManager extends GenericActionBean
 
 	@ServiceMethod("getOrSave")
 	@ExecuteAtomically(DBMSPersistenceUnit.DBMS1)
-	public Contact getOrSaveContact(Contact dto)
+	public Object getOrSaveContact(Contact dto)
 	{
 		List<Contact> result = daoContact.findByExample(dto);
 
